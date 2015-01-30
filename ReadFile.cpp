@@ -8,21 +8,19 @@ ReadFile::ReadFile(const char* file_name)
 	input_file.open(file_name);
 	closed = false;
 	_eof = false;
-
-   return rf;
 }
 
-ReadFile::~Readfile()
+ReadFile::~ReadFile()
 {
    close();
 }
 
-bool eof()
+bool ReadFile::eof()
 {
    return _eof;
 }
 
-void close()
+void ReadFile::close()
 {
    if (!closed)
    {
@@ -31,7 +29,7 @@ void close()
    }
 }
 
-String* readLine()
+String* ReadFile::readLine()
 {
    if (closed) return NULL;
    if (_eof) return NULL;
