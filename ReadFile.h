@@ -21,7 +21,4 @@ class ReadFile
 		void close();
 };
 
-
-
-
 #endif
