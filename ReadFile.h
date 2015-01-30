@@ -15,11 +15,13 @@ class ReadFile
 	public:
 		ReadFile(const char* file_name);
 		~ReadFile();
+		
+		String* readLine();
+		bool eof();
+		void close();
 };
 
 
-String* readLine(ReadFile* rf);
-bool eof(ReadFile* rf);
-void close(ReadFile* rf);
+
 
 #endif
