@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-ReadFile* createReadFile(const char* file_name)
+ReadFile::ReadFile(const char* file_name)
 {
    ReadFile* rf = new ReadFile;
 
@@ -13,9 +13,8 @@ ReadFile* createReadFile(const char* file_name)
    return rf;
 }
 
-void destroyReadFile(ReadFile* rf)
+ReadFile::~Readfile()
 {
-   close(rf);
    delete rf;
 }
 
